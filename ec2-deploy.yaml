@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: true 
+  # becomes root user
+  tasks:
+    - name: Install apache httpd
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+        # present means install absent means uninstall
+        update_cache: yes
+    - name: Copy files from project folder to ec2
+      ansible.builtin.copy:
+        src: ./finance_web_app/
+        dest: /var/www/html/
+        owner: root
+        group: root
+        mode: '0755' 
