@@ -4,7 +4,7 @@ This repository contains Ansible playbooks and configuration files used to autom
 
 
 #### AWS setup
-Spin up 3 EC2 instances and add inbound rule HTTP at port 80 from anywhere. Setup passwordless authentication using ssh-keys or password.
+Spin up 3 EC2 instances and Add an inbound rule to allow HTTP traffic (port 80) from any source. Setup passwordless authentication using ssh-keys or password.
 By default password is disabled on EC2 instance. 
 
 ###### Using Password
